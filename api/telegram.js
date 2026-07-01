@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   const text = [
     'Бележка: Нов розов сайт 350 евро',
     '',
-    'Нова заявка за демо — Premium Studio',
+    'Нова заявка за демо — Kinetix',
     `Име: ${name}`,
     `Бизнес: ${business}`,
     `Имейл: ${email}`,

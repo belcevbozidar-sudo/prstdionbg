@@ -1,4 +1,4 @@
-// ============ Premium Studio — interactions ============
+// ============ Kinetix — interactions ============
 
 document.getElementById('year').textContent = new Date().getFullYear();
 

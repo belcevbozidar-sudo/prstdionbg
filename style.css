@@ -1,4 +1,4 @@
-/* ============ Premium Studio — unique dark editorial agency theme ============ */
+/* ============ Kinetix — unique dark editorial agency theme ============ */
 
 :root{
   --bg: #08080c;
@@ -108,11 +108,8 @@ img{ max-width: 100%; display:block; }
   display:flex; align-items:center; justify-content:space-between; gap: 24px;
 }
 .logo{
-  display:flex; align-items:center; gap:8px;
-  font-family:'Unbounded',sans-serif; font-weight:600; font-size:1.05rem; letter-spacing:-.01em;
+  font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.15rem; letter-spacing:.01em;
 }
-.logo-mark{ color: var(--pink); font-size:1.1rem; }
-.logo em{ font-style:normal; color: var(--text-dim); font-weight:400; }
 .nav-links{ display:flex; gap: 32px; }
 .nav-links a{ font-size:.92rem; color: var(--text-dim); transition: color .2s; position:relative; }
 .nav-links a:hover{ color: var(--text); }
