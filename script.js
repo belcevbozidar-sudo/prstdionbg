@@ -97,6 +97,56 @@ const statIO = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 statEls.forEach(el => statIO.observe(el));
 
+/* ---- process timeline scroll-linked fill ---- */
+const timelineEl = document.querySelector('.timeline');
+const timelineFill = document.getElementById('timelineFill');
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+function updateTimeline(){
+  if(!timelineEl || !timelineFill) return;
+  const rect = timelineEl.getBoundingClientRect();
+  const triggerY = window.innerHeight * 0.62;
+  let filled = triggerY - rect.top;
+  filled = Math.max(0, Math.min(filled, rect.height));
+  timelineFill.style.height = filled + 'px';
+
+  timelineItems.forEach(item => {
+    const num = item.querySelector('.timeline-num');
+    const itemRect = item.getBoundingClientRect();
+    const itemCenter = itemRect.top + itemRect.height / 2;
+    num.classList.toggle('filled', itemCenter <= triggerY);
+  });
+}
+window.addEventListener('scroll', updateTimeline, { passive: true });
+window.addEventListener('resize', updateTimeline);
+updateTimeline();
+
+/* ---- contact modal ---- */
+const contactModal = document.getElementById('contactModal');
+const modalClose = document.getElementById('modalClose');
+
+function openContactModal(){
+  contactModal.classList.add('open');
+  document.body.classList.add('no-scroll');
+}
+function closeContactModal(){
+  contactModal.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+}
+document.querySelectorAll('.js-open-contact').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    openContactModal();
+  });
+});
+modalClose.addEventListener('click', closeContactModal);
+contactModal.addEventListener('click', (e) => {
+  if(e.target === contactModal) closeContactModal();
+});
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape' && contactModal.classList.contains('open')) closeContactModal();
+});
+
 /* ---- magnetic buttons ---- */
 document.querySelectorAll('.magnetic').forEach(btn => {
   btn.addEventListener('mousemove', (e) => {
@@ -110,20 +160,44 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
 });
 
-/* ---- contact form (front-end only demo) ---- */
+/* ---- contact form: sends the lead to Telegram via /api/telegram ---- */
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('button[type="submit"]');
   const label = btn.querySelector('.btn-text');
   const original = label.textContent;
-  label.textContent = 'Изпратено ✓ Ще се свържем с вас скоро';
-  btn.style.opacity = '.85';
   btn.disabled = true;
+  label.textContent = 'Изпращане…';
+
+  const payload = {
+    name: contactForm.name.value,
+    business: contactForm.business.value,
+    email: contactForm.email.value,
+    phone: contactForm.phone.value,
+    message: contactForm.message.value,
+  };
+
+  let success = false;
+  try {
+    const res = await fetch('/api/telegram', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if(!res.ok) throw new Error('request failed');
+    label.textContent = 'Изпратено ✓ Ще се свържем с вас скоро';
+    success = true;
+  } catch (err) {
+    label.textContent = 'Грешка — опитайте отново';
+  }
+
   setTimeout(() => {
     label.textContent = original;
-    btn.style.opacity = '';
     btn.disabled = false;
-    contactForm.reset();
-  }, 3400);
+    if(success){
+      contactForm.reset();
+      closeContactModal();
+    }
+  }, 2600);
 });
