@@ -379,6 +379,27 @@ section{ padding: 110px 0; position:relative; }
 .price-maintenance strong{ color: var(--text); }
 .price-fine{ text-align:center; font-size:.8rem; color: var(--text-dimmer); margin-top: 16px; }
 
+.price-value-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price-lev {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+  font-weight: 500;
+}
+.price-lev-old {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-dimmer);
+  text-decoration: line-through;
+  text-decoration-color: var(--pink);
+  margin-top: 2px;
+}
+
 /* ============ TEAM ============ */
 .ekip{ background: var(--bg-alt); }
 .team-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -510,9 +531,9 @@ body.no-scroll{ overflow:hidden; }
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px){
   .nav-links{ display:none; }
-  .nav .btn-nav{ display:none; }
-  .burger{ display:flex; }
-  .nav-cta-mobile{ display:inline-flex; margin-top:6px; width:100%; justify-content:center; }
+  .nav .btn-nav{ display:inline-flex; }
+  .burger{ display:none; }
+  .nav-cta-mobile{ display:none; }
   .split{ grid-template-columns:1fr; }
   .bento{ grid-template-columns: repeat(2,1fr); }
   .stats-grid{ grid-template-columns: repeat(2,1fr); row-gap: 36px; }

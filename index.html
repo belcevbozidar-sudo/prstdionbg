@@ -23,7 +23,7 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="logo">
-      Kinetix
+      <img src="images/logo.png" alt="Kinetix Logo" style="height: 32px; display: block;">
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#uslugi">Услуги</a>
@@ -32,7 +32,6 @@
       <a href="#otzivi">Отзиви</a>
       <a href="#екип">Екип</a>
       <a href="#faq">Въпроси</a>
-      <button type="button" class="btn btn-primary nav-cta-mobile js-open-contact">Безплатно демо</button>
     </nav>
     <button type="button" class="btn btn-nav js-open-contact">Безплатно демо</button>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -77,27 +76,6 @@
   <div class="hero-fade"></div>
 </section>
 
-<!-- STATS -->
-<section class="stats-section">
-  <div class="container stats-grid">
-    <div class="stat reveal">
-      <div class="stat-num" data-count="58">0</div>
-      <div class="stat-label">Български бизнеса</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num" data-count="24" data-suffix="ч.">0</div>
-      <div class="stat-label">За готово демо</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num" data-count="0">0</div>
-      <div class="stat-label">Предплащане</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num" data-count="365" data-suffix=" дни">0</div>
-      <div class="stat-label">Безплатна поддръжка</div>
-    </div>
-  </div>
-</section>
 
 <!-- PROBLEM / SOLUTION -->
 <section class="problem">
@@ -244,11 +222,17 @@
       <div class="price-top">
         <div class="price-old">
           <span>Обичайна цена</span>
-          <strong>450€ <em>(880,12 лв.)</em></strong>
+          <div class="price-value-container">
+            <strong>450€</strong>
+            <span class="price-lev-old">880,12 лв.</span>
+          </div>
         </div>
         <div class="price-new">
           <span>Вашата цена сега</span>
-          <strong class="grad-text">350€ <em>(684,54 лв.)</em></strong>
+          <div class="price-value-container">
+            <strong class="grad-text">350€</strong>
+            <span class="price-lev">684,54 лв.</span>
+          </div>
         </div>
       </div>
 
@@ -282,13 +266,13 @@
 
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar"><span class="avatar-fallback">БИ</span><img src="images/bozhidar.jpg" alt="Божидар Иванов" onerror="this.style.display='none'"></div>
+        <div class="team-avatar"><span class="avatar-fallback">БИ</span><img src="images/bozhidar.png" alt="Божидар Иванов" onerror="this.style.display='none'"></div>
         <h3>Божидар Иванов</h3>
         <span class="team-role">Дизайн и разработка</span>
         <p>Фокусиран върху бързи, модерни и интуитивни интерфейси, работещи безупречно на всяко устройство.</p>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar"><span class="avatar-fallback avatar-fallback-alt">КД</span><img src="images/kaloyan.jpg" alt="Калоян Димитров" onerror="this.style.display='none'"></div>
+        <div class="team-avatar"><span class="avatar-fallback avatar-fallback-alt">КД</span><img src="images/kaloyan.png" alt="Калоян Димитров" onerror="this.style.display='none'"></div>
         <h3>Калоян Димитров</h3>
         <span class="team-role">Копирайтинг и стратегия</span>
         <p>Подрежда информацията, изгражда бизнес логиката и формулира ясно посланията към вашите клиенти.</p>
@@ -382,7 +366,9 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="logo">Kinetix</a>
+      <a href="#top" class="logo">
+        <img src="images/logo.png" alt="Kinetix Logo" style="height: 32px; display: block;">
+      </a>
       <p>Уебсайтове за български бизнеси, изградени да носят клиенти.</p>
     </div>
     <div class="footer-links">
