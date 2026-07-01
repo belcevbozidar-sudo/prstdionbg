@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Studio — Уебсайтове, които носят клиенти</title>
+<meta name="description" content="Premium Studio изгражда уебсайтове за български бизнеси, съчетаващи дизайн, копирайтинг, SEO и чатбот. Безплатно демо до 24 часа, без риск, без предплащане.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23ff5fa2%22>◆</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">◆</span>
+      <span>Premium<em>Studio</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#uslugi">Услуги</a>
+      <a href="#proces">Процес</a>
+      <a href="#paket">Пакет</a>
+      <a href="#otzivi">Отзиви</a>
+      <a href="#екип">Екип</a>
+      <a href="#faq">Въпроси</a>
+    </nav>
+    <a href="#contact" class="btn btn-nav">Безплатно демо</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="mesh mesh-1"></div>
+  <div class="mesh mesh-2"></div>
+  <div class="mesh mesh-3"></div>
+  <div class="hero-grid-bg"></div>
+
+  <div class="container hero-inner">
+    <div class="reveal eyebrow"><span class="dot-pulse"></span> 58 български бизнеса вече растат с нас</div>
+    <h1 class="reveal hero-title">
+      Уебсайт, който <span class="grad-text">продава</span>,<br>
+      докато вие управлявате <span class="underline-sketch">бизнеса</span>.
+    </h1>
+    <p class="reveal hero-sub">
+      Изграждаме сайтове за български бизнеси, фокусирани върху едно нещо — повече реални клиенти.
+      Дизайн, копирайтинг, SEO и чатбот, работещи заедно като една система.
+    </p>
+    <div class="reveal hero-cta">
+      <a href="#contact" class="btn btn-primary btn-lg magnetic">
+        Поискай безплатно демо
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#proces" class="btn btn-ghost btn-lg">Как работим</a>
+    </div>
+    <p class="reveal hero-note">Без риск · Без предплащане · Демо до 24 часа</p>
+  </div>
+
+  <div class="marquee-wrap reveal">
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>ДИЗАЙН</span><span>·</span><span>КОПИРАЙТИНГ</span><span>·</span><span>SEO</span><span>·</span><span>ЧАТБОТ</span><span>·</span><span>ХОСТИНГ</span><span>·</span><span>ПОДДРЪЖКА</span><span>·</span>
+        <span>ДИЗАЙН</span><span>·</span><span>КОПИРАЙТИНГ</span><span>·</span><span>SEO</span><span>·</span><span>ЧАТБОТ</span><span>·</span><span>ХОСТИНГ</span><span>·</span><span>ПОДДРЪЖКА</span><span>·</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num" data-count="58">0</div>
+      <div class="stat-label">Български бизнеса</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num" data-count="24" data-suffix="ч.">0</div>
+      <div class="stat-label">За готово демо</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num" data-count="0" data-suffix=" лв.">0</div>
+      <div class="stat-label">Предплащане</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num" data-count="365" data-suffix=" дни">0</div>
+      <div class="stat-label">Безплатна поддръжка</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="problem">
+  <div class="container">
+    <div class="split">
+      <div class="split-text reveal">
+        <span class="tag">Защо Premium Studio</span>
+        <h2 class="h2">Красив сайт е лесен.<br>Сайт, който <span class="grad-text">носи клиенти</span>, не е.</h2>
+        <p class="p-lead">
+          Повечето агенции спират до дизайна. Ние гледаме на вашия сайт като на най-добрия ви търговец —
+          който работи 24 часа в денонощието, обяснява какво предлагате, печели доверие и не оставя нито
+          едно запитване без отговор.
+        </p>
+      </div>
+      <div class="split-cards">
+        <div class="mini-card reveal">
+          <span class="mini-num">01</span>
+          <h3>Дизайн, който продава</h3>
+          <p>Не просто "красиво" — структура, изградена да води посетителя към действие.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-num">02</span>
+          <h3>Текст, който убеждава</h3>
+          <p>Проучваме конкурентите и идеалните ви клиенти, преди да напишем и ред.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-num">03</span>
+          <h3>Система, не проект</h3>
+          <p>SEO, чатбот и поддръжка работят заедно дълго след старта на сайта.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGI / BENTO -->
+<section class="uslugi" id="uslugi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Какво включва пакетът</span>
+      <h2 class="h2">Всичко нужно, за да тръгне бизнесът ви <span class="grad-text">онлайн</span> — на едно място.</h2>
+    </div>
+
+    <div class="bento">
+      <div class="bento-card bento-lg reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M8 4v5" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Уебсайт по мярка</h3>
+        <p>Изграден специално за вашия бизнес, услуги и аудитория — не шаблон, преправен набързо, а сайт, скроен точно за вас.</p>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 20l3-9 9-9 4 4-9 9-9 3-2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Копирайтинг, който продава</h3>
+        <p>Проучване на конкуренти и идеални клиенти. Текстове, звучащи ясно, професионално и убедително.</p>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Хостинг, домейн и техника</h3>
+        <p>.com домейн, хостинг и цялостна техническа настройка — без да пипате нищо сами.</p>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>365 дни грижа</h3>
+        <p>Цяла година безплатна поддръжка: технически грижи, бързи редакции и актуализации за сигурност.</p>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>SEO от старта</h3>
+        <p>Структура, мета описания, заглавия, alt текстове, sitemap файл и регистрация в Google.</p>
+      </div>
+
+      <div class="bento-card bento-lg reveal">
+        <div class="bento-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3a8 8 0 018 8v3a4 4 0 01-4 4H9l-4 3v-3a8 8 0 01-1-3v-4a8 8 0 018-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9" cy="11" r="1" fill="currentColor"/><circle cx="14" cy="11" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Безплатен чатбот 24/7</h3>
+        <p>Програмиран специално за вашия бизнес — посреща посетители, отговаря на въпроси, задава насочващи въпроси и събира контакти дори през нощта, за да не изпускате нито едно запитване.</p>
+      </div>
+    </div>
+
+    <p class="bento-footnote reveal">И това е само основата — анимации, многоезична поддръжка, контактни форми, галерии и всичко друго, от което се нуждае конкретно вашият бизнес.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="proces" id="proces">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Как работим</span>
+      <h2 class="h2">Нулев риск. <span class="grad-text">Пълна яснота</span> на всяка стъпка.</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-num">01</div>
+        <div class="timeline-body">
+          <h3>Безплатно демо за 24 часа</h3>
+          <p>Изготвяме демо версия на вашия бъдещ сайт — напълно безплатно, без ангажимент и без предварително плащане. Вие виждате посоката на дизайна и структурата, преди да решите дали да продължите.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-num">02</div>
+        <div class="timeline-body">
+          <h3>Харесва ли ви? Продължаваме.</h3>
+          <p>Ако демото ви хареса и искате да продължим, плащате първата част — <strong>255€ (498,74 лв.)</strong>. Ако не — не дължите нищо.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-num">03</div>
+        <div class="timeline-body">
+          <h3>Финализиране и старт</h3>
+          <p>Довършваме всеки детайл — дизайн, текстове, SEO, чатбот. Втората част — <strong>255€ (498,74 лв.)</strong> — се плаща едва когато сайтът е напълно готов и вие сте напълно доволни.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="paket" id="paket">
+  <div class="mesh mesh-4"></div>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Инвестиция</span>
+      <h2 class="h2">Прозрачна цена. <span class="grad-text">Без изненади</span>.</h2>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-badge">Ограничено намаление</div>
+      <div class="price-top">
+        <div class="price-old">
+          <span>Обичайна цена</span>
+          <strong>610€ <em>(1 193,06 лв.)</em></strong>
+        </div>
+        <div class="price-new">
+          <span>Вашата цена сега</span>
+          <strong class="grad-text">510€ <em>(997,47 лв.)</em></strong>
+        </div>
+      </div>
+
+      <div class="price-split">
+        <div class="split-item">
+          <span class="split-tag">Част 1</span>
+          <strong>255€ <em>(498,74 лв.)</em></strong>
+          <p>Плаща се само ако демото ви хареса</p>
+        </div>
+        <div class="split-plus">+</div>
+        <div class="split-item">
+          <span class="split-tag">Част 2</span>
+          <strong>255€ <em>(498,74 лв.)</em></strong>
+          <p>Плаща се, когато сайтът е напълно готов</p>
+        </div>
+      </div>
+
+      <ul class="price-list">
+        <li>Уебсайт по мярка + копирайтинг</li>
+        <li>Хостинг, .com домейн и техническа настройка</li>
+        <li>365 дни безплатен хостинг и поддръжка</li>
+        <li>Първоначална SEO оптимизация</li>
+        <li>Безплатен чатбот, обучен за вашия бизнес</li>
+      </ul>
+
+      <div class="price-maintenance">
+        След първата година: поддръжка само <strong>150€ (293,37 лв.) / година</strong>
+      </div>
+
+      <a href="#contact" class="btn btn-primary btn-lg btn-block magnetic">Заяви безплатно демо</a>
+      <p class="price-fine">Фиксиран курс 1€ = 1,95583 лв. Издаваме фактура при поискване.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="ekip" id="екип">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Зад Premium Studio</span>
+      <h2 class="h2">Двама души. <span class="grad-text">Пълна отговорност.</span></h2>
+      <p class="p-lead">Никакви посредници — работите директно с хората, които изграждат вашия сайт.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">БИ</div>
+        <h3>Божидар Иванов</h3>
+        <span class="team-role">Дизайн и разработка</span>
+        <p>Фокусиран върху бързи, модерни и интуитивни интерфейси, работещи безупречно на всяко устройство.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar team-avatar-alt">КД</div>
+        <h3>Калоян Димитров</h3>
+        <span class="team-role">Копирайтинг и стратегия</span>
+        <p>Подрежда информацията, изгражда бизнес логиката и формулира ясно посланията към вашите клиенти.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="otzivi" id="otzivi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Отзиви</span>
+      <h2 class="h2">58 бизнеса. <span class="grad-text">Реални резултати.</span></h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"След преструктурирането на сайта запитванията ни се увеличиха осезаемо. Най-накрая имаме онлайн присъствие, което отговаря на нивото ни."</p>
+        <div class="review-author">Основателка на интериорно студио</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Целият процес мина леко — не се наложи сам да търся домейни, хостинг или каквото и да е техническо. Просто се получи."</p>
+        <div class="review-author">Управител на консултантска кантора</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Помогнаха ми с текстовете точно там, където аз самата се затруднявах да обясня какво предлагам. Резултатът звучи като мен, само по-добре."</p>
+        <div class="review-author">Основателка на бранд за натурална козметика</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Реакцията при поддръжката е изключително бърза. Когато ми потрябва малка промяна, я получавам същия ден."</p>
+        <div class="review-author">Основател на клиника за естетична медицина</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Безрисковото демо ме спечели от самото начало — видях резултата, преди да платя каквото и да било."</p>
+        <div class="review-author">Основателка на онлайн магазин за кафе и чай</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Чатботът автоматично насочва клиентите и генерира качествени запитвания — сякаш имаме служител, който никога не спи."</p>
+        <div class="review-author">Управител на езиков център</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">Въпроси</span>
+      <h2 class="h2">Отговори, преди да <span class="grad-text">попитате</span>.</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal" open>
+        <summary>Демото наистина ли е напълно безплатно?</summary>
+        <p>Да. Изготвяме демо версия на сайта ви до 24 часа, без ангажимент и без никакво предварително плащане. Вие решавате дали да продължите едва след като го видите.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Какво се случва, ако демото не ми хареса?</summary>
+        <p>Нищо не дължите. Просто не продължаваме — без обяснения, без такси, без риск за вас.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Как точно се разделя плащането?</summary>
+        <p>На две равни части по 255€ (498,74 лв.). Първата — само ако демото ви хареса и искате да продължите. Втората — едва когато сайтът е напълно завършен и сте доволни.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Можете ли да добавите анимации, галерии или няколко езика?</summary>
+        <p>Да — практически без ограничения. Анимации, многоезична поддръжка, контактни форми, галерии и всичко друго, от което се нуждае конкретно вашият бизнес.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Какво включва поддръжката след пускането на сайта?</summary>
+        <p>365 дни безплатен хостинг и поддръжка — технически грижи, бързи редакции на съдържание и актуализации за сигурност. След първата година — само 150€ (293,37 лв.) годишно.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Издавате ли фактура?</summary>
+        <p>Да, издаваме фактура при поискване за всяко плащане.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FINAL CTA -->
+<section class="contact" id="contact">
+  <div class="mesh mesh-5"></div>
+  <div class="container contact-inner">
+    <div class="section-head reveal center">
+      <span class="tag">Заявка</span>
+      <h2 class="h2">Готови ли сте за сайт, който <span class="grad-text">работи вместо вас</span>?</h2>
+      <p class="p-lead">Оставете данни за връзка — изпращаме безплатното демо до 24 часа.</p>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <div class="form-field">
+          <input type="text" id="name" name="name" placeholder=" " required>
+          <label for="name">Име</label>
+        </div>
+        <div class="form-field">
+          <input type="text" id="business" name="business" placeholder=" " required>
+          <label for="business">Бизнес / фирма</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <input type="email" id="email" name="email" placeholder=" " required>
+          <label for="email">Имейл</label>
+        </div>
+        <div class="form-field">
+          <input type="tel" id="phone" name="phone" placeholder=" ">
+          <label for="phone">Телефон (по избор)</label>
+        </div>
+      </div>
+      <div class="form-field">
+        <textarea id="message" name="message" placeholder=" " rows="3"></textarea>
+        <label for="message">Разкажете накратко за бизнеса си</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block magnetic">
+        <span class="btn-text">Изпрати заявка за демо</span>
+      </button>
+      <p class="form-fine">Без риск. Без предплащане. Отговаряме до 24 часа.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="logo">
+        <span class="logo-mark">◆</span>
+        <span>Premium<em>Studio</em></span>
+      </a>
+      <p>Уебсайтове за български бизнеси, изградени да носят клиенти.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#uslugi">Услуги</a>
+      <a href="#proces">Процес</a>
+      <a href="#paket">Пакет</a>
+      <a href="#otzivi">Отзиви</a>
+      <a href="#екип">Екип</a>
+      <a href="#faq">Въпроси</a>
+    </div>
+    <div class="footer-meta">
+      <p>Фиксиран курс: 1€ = 1,95583 лв.</p>
+      <p>Издаваме фактура при поискване.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© <span id="year"></span> Premium Studio. Всички права запазени.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
