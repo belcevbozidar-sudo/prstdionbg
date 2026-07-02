@@ -198,6 +198,7 @@ contactForm.addEventListener('submit', async (e) => {
     if(success){
       contactForm.reset();
       closeContactModal();
+      window.location.href = '/thank-you';
     }
-  }, 2600);
+  }, 2000);
 });

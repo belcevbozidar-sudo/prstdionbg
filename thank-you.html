@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Благодарим ви! — Kinetix</title>
+<meta name="description" content="Вашата заявка за безплатно демо беше изпратена успешно. Ще се свържем с вас скоро.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.75em%22 font-size=%2270%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22%23ff5fa2%22>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .thank-you-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 20px 80px;
+  }
+  .thank-you-card {
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  }
+  .thank-you-card h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .thank-you-card p {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .thank-you-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--pink);
+    filter: blur(100px);
+    opacity: 0.15;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Kinetix Logo" style="height: 32px; display: block;">
+    </a>
+    <nav class="nav-links">
+      <a href="/#uslugi">Услуги</a>
+      <a href="/#proces">Процес</a>
+      <a href="/#paket">Пакет</a>
+      <a href="/#otzivi">Отзиви</a>
+      <a href="/#екип">Екип</a>
+      <a href="/#faq">Въпроси</a>
+    </nav>
+    <a href="/" class="btn btn-nav">Начало</a>
+  </div>
+</header>
+
+<section class="thank-you-section">
+  <div class="thank-you-glow"></div>
+  <div class="thank-you-card">
+    <h1 class="grad-text">Благодарим ви!</h1>
+    <p>Вашата заявка за безплатно демо беше изпратена успешно. Екипът на Kinetix ще се свърже с вас в рамките на следващите 24 часа на посочения телефон или имейл за обсъждане на детайлите.</p>
+    <a href="/" class="btn btn-primary btn-lg magnetic" style="display: inline-flex; width: auto;">Обратно към сайта</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">
+        <img src="images/logo.png" alt="Kinetix Logo" style="height: 32px; display: block;">
+      </a>
+      <p>Уебсайтове за български бизнеси, изградени да носят клиенти.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/#uslugi">Услуги</a>
+      <a href="/#proces">Процес</a>
+      <a href="/#paket">Пакет</a>
+      <a href="/#otzivi">Отзиви</a>
+      <a href="/#екип">Екип</a>
+      <a href="/#faq">Въпроси</a>
+    </div>
+    <div class="footer-meta">
+      <p>Фиксиран курс: 1€ = 1,95583 лв.</p>
+      <p>Издаваме фактура при поискване.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kinetix. Всички права запазени.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const card = document.querySelector('.thank-you-card');
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 100);
+  });
+</script>
+
+</body>
+</html>
