@@ -59,29 +59,13 @@
     pointer-events: none;
   }
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2191550724962643');
-fbq('track', 'PageView');
-fbq('track', 'Contact');
-fbq('track', 'Lead');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2191550724962643&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<!-- Meta Pixel Code loaded dynamically via script.js -->
 </head>
 <body>
 
 <div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
 <header class="nav" id="nav">
   <div class="nav-inner">
@@ -131,10 +115,18 @@ src="https://www.facebook.com/tr?id=2191550724962643&ev=PageView&noscript=1"
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Kinetix. Всички права запазени.</p>
+    <div class="container footer-bottom-container">
+      <p>© <span id="year"></span> Kinetix. Всички права запазени.</p>
+      <div class="footer-legal-links">
+        <a href="/privacy-policy">Политика за поверителност</a>
+        <a href="/terms">Условия за ползване</a>
+        <a href="/cookie-policy">Политика за бисквитките</a>
+      </div>
+    </div>
   </div>
 </footer>
 
+<script src="script.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const card = document.querySelector('.thank-you-card');
