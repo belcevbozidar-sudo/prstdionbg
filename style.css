@@ -428,9 +428,38 @@ section{ padding: 110px 0; position:relative; }
 }
 .review-card:hover{ transform: translateY(-6px); border-color: rgba(255,176,32,.35); }
 .stars{ color: var(--amber); letter-spacing:2px; margin-bottom: 16px; font-size:.9rem; }
-.review-card p{ font-size:.96rem; color: var(--text); margin-bottom: 18px; }
-.review-author{ font-size:.85rem; color: var(--text-dim); }
-.review-author::before{ content:'— '; }
+.review-card p{ font-size:.96rem; color: var(--text); margin-bottom: 0; line-height: 1.6; }
+.review-user{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.review-avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.review-info{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.review-name{
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.review-role{
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
 
 /* ============ FAQ ============ */
 .faq{ background: var(--bg-alt); overflow:hidden; }
