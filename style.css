@@ -274,8 +274,20 @@ img{ max-width: 100%; display:block; }
 
 section{ padding: 110px 0; position:relative; }
 
-/* ============ PROBLEM/SOLUTION ============ */
-.problem{ background: var(--bg-alt); }
+.problem{ position: relative; background: var(--bg-alt); }
+.problem::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
+  height: 100px;
+  background: radial-gradient(ellipse at center, rgba(255, 176, 32, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 10;
+}
 .split{ display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:start; }
 .split-cards{ display:flex; flex-direction:column; gap:18px; }
 .mini-card{
