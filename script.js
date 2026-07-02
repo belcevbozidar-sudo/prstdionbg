@@ -171,9 +171,6 @@ contactForm.addEventListener('submit', async (e) => {
   label.textContent = 'Изпращане…';
 
   const payload = {
-    name: contactForm.name.value,
-    business: contactForm.business.value,
-    email: contactForm.email.value,
     phone: contactForm.phone.value,
     message: contactForm.message.value,
   };

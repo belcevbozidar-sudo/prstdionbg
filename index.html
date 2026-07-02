@@ -417,29 +417,13 @@ src="https://www.facebook.com/tr?id=2191550724962643&ev=PageView&noscript=1"
     </div>
 
     <form class="contact-form" id="contactForm">
-      <div class="form-row">
-        <div class="form-field">
-          <input type="text" id="name" name="name" placeholder=" " required>
-          <label for="name">Име</label>
-        </div>
-        <div class="form-field">
-          <input type="text" id="business" name="business" placeholder=" " required>
-          <label for="business">Бизнес / фирма</label>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-field">
-          <input type="email" id="email" name="email" placeholder=" " required>
-          <label for="email">Имейл</label>
-        </div>
-        <div class="form-field">
-          <input type="tel" id="phone" name="phone" placeholder=" ">
-          <label for="phone">Телефон (по избор)</label>
-        </div>
+      <div class="form-field">
+        <input type="tel" id="phone" name="phone" placeholder="+359..." required>
+        <label for="phone">Телефонен номер</label>
       </div>
       <div class="form-field">
-        <textarea id="message" name="message" placeholder=" " rows="3"></textarea>
-        <label for="message">Разкажете накратко за бизнеса си</label>
+        <textarea id="message" name="message" placeholder="Опишете бизнеса, какво предлагате и какъв сайт искате. Опитайте се да бъдете максимално детайлни." rows="5" required></textarea>
+        <label for="message">Какъв сайт искаме?</label>
       </div>
       <button type="submit" class="btn btn-primary btn-lg btn-block magnetic">
         <span class="btn-text">Изпрати заявка за демо</span>
