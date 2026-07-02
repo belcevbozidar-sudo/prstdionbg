@@ -226,15 +226,14 @@ img{ max-width: 100%; display:block; }
 
 .hero-fade{
   position:relative; z-index:1; flex-shrink:0;
-  height:220px; margin-top:10px;
+  height:90px; margin-top:10px;
   background: linear-gradient(to bottom, transparent, var(--bg) 85%);
   pointer-events:none;
 }
 
 /* marquee */
-.marquee-wrap{ position:relative; z-index:2; margin-top: 70px; }
+.marquee-wrap{ position:relative; z-index:2; margin-top: 10px; }
 .marquee{
-  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
   padding: 16px 0; overflow:hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
