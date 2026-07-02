@@ -263,8 +263,8 @@ function initCookieConsent() {
         Използваме бисквитки, за да подобрим вашето преживяване на нашия сайт. С посещението му се съгласявате с нашите условия.
       </div>
       <div class="cookie-banner-actions" id="cookieActions">
-        <button class="btn btn-nav" id="cookieLearnMore">Научи повече</button>
         <button class="btn btn-primary" id="cookieAccept" style="background: var(--grad); color: #0a0a0d;">Потвърждавам</button>
+        <button class="btn btn-nav" id="cookieLearnMore">Научи повече</button>
       </div>
     </div>
   `;
@@ -295,8 +295,8 @@ function initCookieConsent() {
       Бисквитките ни помагат да анализираме трафика и да персонализираме рекламите. За повече информация прочетете нашата <a href="/privacy-policy">Политика за поверителност</a> и <a href="/cookie-policy">Политика за бисквитките</a>.
     `;
     document.getElementById('cookieActions').innerHTML = `
-      <button class="btn btn-nav" id="cookieDecline">Отказвам</button>
       <button class="btn btn-primary" id="cookieAcceptExpanded" style="background: var(--grad); color: #0a0a0d;">Потвърждавам</button>
+      <button class="btn btn-nav" id="cookieDecline">Отказвам</button>
     `;
 
     // Re-attach handlers for new buttons
