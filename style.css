@@ -169,7 +169,6 @@ img{ max-width: 100%; display:block; }
 }
 .mesh-1{ width:520px; height:520px; background: var(--violet); top:-180px; left:-120px; }
 .mesh-2{ width:460px; height:460px; background: var(--pink); top:60px; right:-160px; animation-delay:-4s; }
-.mesh-3{ width:380px; height:380px; background: var(--amber); bottom:-160px; left:35%; animation-delay:-9s; opacity:.35; }
 .mesh-4{ width:480px; height:480px; background: var(--violet); top:-100px; right:-140px; opacity:.28; }
 .mesh-5{ width:460px; height:460px; background: var(--pink); bottom:-180px; left:-100px; opacity:.28; }
 
