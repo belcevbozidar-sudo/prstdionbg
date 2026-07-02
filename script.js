@@ -168,7 +168,7 @@ contactForm.addEventListener('submit', async (e) => {
   const label = btn.querySelector('.btn-text');
   const original = label.textContent;
   btn.disabled = true;
-  label.textContent = 'Изпращане…';
+  btn.classList.add('btn-loading');
 
   const payload = {
     phone: contactForm.phone.value,
@@ -183,19 +183,19 @@ contactForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(payload),
     });
     if(!res.ok) throw new Error('request failed');
-    label.textContent = 'Изпратено ✓ Ще се свържем с вас скоро';
     success = true;
   } catch (err) {
+    btn.classList.remove('btn-loading');
     label.textContent = 'Грешка — опитайте отново';
+    btn.disabled = false;
+    setTimeout(() => {
+      label.textContent = original;
+    }, 3000);
   }
 
-  setTimeout(() => {
-    label.textContent = original;
-    btn.disabled = false;
-    if(success){
-      contactForm.reset();
-      closeContactModal();
-      window.location.href = '/thank-you';
-    }
-  }, 2000);
+  if (success) {
+    contactForm.reset();
+    closeContactModal();
+    window.location.href = '/thank-you';
+  }
 });
