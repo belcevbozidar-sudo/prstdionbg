@@ -232,16 +232,16 @@ img{ max-width: 100%; display:block; }
 }
 
 /* marquee */
-.marquee-wrap{ position:relative; z-index:2; margin-top: 10px; }
+.marquee-wrap{ position:relative; z-index:2; margin-top: 40px; }
 .marquee{
-  padding: 16px 0; overflow:hidden;
+  padding: 20px 0; overflow:hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
 }
 .marquee-track{
   display:flex; gap: 20px; white-space:nowrap; width:max-content;
   animation: scroll-left 22s linear infinite;
-  font-family:'Unbounded',sans-serif; font-size:.85rem; color: var(--text-dimmer); letter-spacing:.08em;
+  font-family:'Unbounded',sans-serif; font-size:1.05rem; color: var(--text-dimmer); letter-spacing:.08em;
 }
 .marquee-track span:nth-child(odd){ color: var(--text-dim); }
 @keyframes scroll-left{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
