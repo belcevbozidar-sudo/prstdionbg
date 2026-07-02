@@ -76,11 +76,7 @@ img{ max-width: 100%; display:block; }
 .cursor-ring.hovered{ width:56px; height:56px; border-color: var(--pink); background: rgba(255,95,162,.08); }
 @media (hover:none){ .cursor-dot,.cursor-ring{ display:none; } }
 
-/* ---------- scroll progress ---------- */
-.progress-bar{
-  position: fixed; top:0; left:0; height:3px; width:0%;
-  background: var(--grad); z-index: 1001; transition: width .1s linear;
-}
+
 
 /* ---------- reveal animation ---------- */
 .reveal{
@@ -130,6 +126,7 @@ img{ max-width: 100%; display:block; }
   padding: 12px 22px; border-radius: 100px;
   font-weight:600; font-size:.92rem;
   border: 1px solid transparent;
+  color: var(--text);
   transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, border-color .25s;
   white-space: nowrap;
 }

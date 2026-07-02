@@ -33,7 +33,7 @@ function onScroll(){
   nav.classList.toggle('scrolled', window.scrollY > 40);
   const h = document.documentElement;
   const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-  progressBar.style.width = scrolled + '%';
+  if (progressBar) progressBar.style.width = scrolled + '%';
 }
 window.addEventListener('scroll', onScroll);
 onScroll();
