@@ -95,7 +95,7 @@ export default async function handler(req, res) {
   }
 
   const text = [
-    'Бележка: Нов розов сайт 350 евро',
+    'Бележка: Нов розов сайт 450 евро',
     '',
     'Нова заявка за демо — Kinetix',
     `Телефон: ${phone}`,
