@@ -344,26 +344,26 @@ function initReviewModal() {
   if (openReviewBtns && reviewModal && closeReviewBtn) {
     openReviewBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        reviewModal.classList.add('show');
+        reviewModal.classList.add('open');
         document.body.classList.add('no-scroll');
       });
     });
 
     closeReviewBtn.addEventListener('click', () => {
-      reviewModal.classList.remove('show');
+      reviewModal.classList.remove('open');
       document.body.classList.remove('no-scroll');
     });
 
     reviewModal.addEventListener('click', (e) => {
       if (e.target === reviewModal) {
-        reviewModal.classList.remove('show');
+        reviewModal.classList.remove('open');
         document.body.classList.remove('no-scroll');
       }
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && reviewModal.classList.contains('show')) {
-        reviewModal.classList.remove('show');
+      if (e.key === 'Escape' && reviewModal.classList.contains('open')) {
+        reviewModal.classList.remove('open');
         document.body.classList.remove('no-scroll');
       }
     });
@@ -430,7 +430,7 @@ function initReviewModal() {
           if (res.ok) {
             alert('Благодарим ви! Вашият отзив беше изпратен успешно за преглед.');
             reviewForm.reset();
-            reviewModal.classList.remove('show');
+            reviewModal.classList.remove('open');
             document.body.classList.remove('no-scroll');
           } else {
             alert('Грешка при изпращането. Моля, опитайте отново.');
