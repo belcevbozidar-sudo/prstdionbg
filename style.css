@@ -1,5 +1,62 @@
 /* ============ Kinetix — unique dark editorial agency theme ============ */
 
+@font-face{
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/unbounded-400.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/unbounded-500.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/unbounded-600.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/unbounded-700.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/manrope-400.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/manrope-500.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/manrope-600.woff2') format('woff2');
+}
+@font-face{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/manrope-700.woff2') format('woff2');
+}
+
 :root{
   --bg: #08080c;
   --bg-alt: #0d0d13;
