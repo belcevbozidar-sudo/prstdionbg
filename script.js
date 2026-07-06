@@ -324,7 +324,125 @@ function initCookieConsent() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initCookieConsent);
+  document.addEventListener('DOMContentLoaded', () => {
+    initCookieConsent();
+    initReviewModal();
+  });
 } else {
   initCookieConsent();
+  initReviewModal();
 }
+
+/* ============ REVIEW MODAL LOGIC ============ */
+function initReviewModal() {
+  const reviewModal = document.getElementById('reviewModal');
+  const openReviewBtns = document.querySelectorAll('.js-open-review');
+  const closeReviewBtn = document.getElementById('reviewModalClose');
+  const reviewForm = document.getElementById('reviewForm');
+  const cursorRing = document.getElementById('cursorRing');
+
+  if (openReviewBtns && reviewModal && closeReviewBtn) {
+    openReviewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        reviewModal.classList.add('show');
+        document.body.classList.add('no-scroll');
+      });
+    });
+
+    closeReviewBtn.addEventListener('click', () => {
+      reviewModal.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    });
+
+    reviewModal.addEventListener('click', (e) => {
+      if (e.target === reviewModal) {
+        reviewModal.classList.remove('show');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && reviewModal.classList.contains('show')) {
+        reviewModal.classList.remove('show');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+
+    // Custom cursor hover listeners
+    if (cursorRing) {
+      openReviewBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
+        btn.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+      });
+      closeReviewBtn.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
+      closeReviewBtn.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+      
+      const ratingLabels = reviewForm.querySelectorAll('.star-rating label');
+      ratingLabels.forEach(lbl => {
+        lbl.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
+        lbl.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+      });
+    }
+  }
+
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = reviewForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const originalText = btnText.textContent;
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-loading');
+
+      const photoFile = document.getElementById('reviewPhoto').files[0];
+      const name = document.getElementById('reviewNameInput').value;
+      const role = document.getElementById('reviewRoleInput').value;
+      const text = document.getElementById('reviewTextInput').value;
+      const rating = reviewForm.querySelector('input[name="rating"]:checked').value;
+
+      if (photoFile && photoFile.size > 3 * 1024 * 1024) {
+        alert('Снимката е твърде голяма. Моля, изберете файл под 3 MB.');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('btn-loading');
+        return;
+      }
+
+      // Convert file to base64
+      const reader = new FileReader();
+      reader.readAsDataURL(photoFile);
+      reader.onerror = () => {
+        alert('Грешка при четене на снимката.');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('btn-loading');
+      };
+      
+      reader.onload = async () => {
+        const photoBase64 = reader.result;
+
+        try {
+          const res = await fetch('/api/review', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, role, text, rating, photo: photoBase64 })
+          });
+
+          if (res.ok) {
+            alert('Благодарим ви! Вашият отзив беше изпратен успешно за преглед.');
+            reviewForm.reset();
+            reviewModal.classList.remove('show');
+            document.body.classList.remove('no-scroll');
+          } else {
+            alert('Грешка при изпращането. Моля, опитайте отново.');
+          }
+        } catch (err) {
+          alert('Грешка при връзката. Моля, опитайте отново.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('btn-loading');
+        }
+      };
+    });
+  }
+}
+

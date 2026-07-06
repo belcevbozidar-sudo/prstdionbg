@@ -250,7 +250,7 @@
       </div>
 
       <div class="review-card pricing-review" style="margin-bottom: 28px; border-color: rgba(255,176,32,.25); text-align: left;">
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★★ (5 звезди)</div>
         <p>“Бяхме скептични към другите агенции да платим предварително на сляпо. Безплатната демо версия, която ни направиха преди да дадем и един лев, напълно ни спечели. Видяхме точната посока на сайта предварително без абсолютно никакъв риск.”</p>
         <div class="review-user">
           <img class="review-avatar" src="images/review_petya.png" alt="Петя П." width="44" height="44">
@@ -307,18 +307,7 @@
 
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>“Старият ни сайт беше много красив, но никой не ни беше писал от него. Те промениха изцяло структурата, подредиха секциите така, че да изграждат доверие, и сложиха ясни бутони за връзка. Запитванията ни се увеличиха”</p>
-        <div class="review-user">
-          <img class="review-avatar" src="images/review_maria.png" alt="Елена К." width="44" height="44">
-          <div class="review-info">
-            <span class="review-name">Елена К.</span>
-            <span class="review-role">Основател на интериорно студио</span>
-          </div>
-        </div>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★★ (5 звезди)</div>
         <p>“Повечето фирми ни караха ние да купуваме домейни, хостинги, да търсим настройки. Тук просто им казахме какво искаме и след няколко дни всичко беше онлайн. Спести ни десетки часове главоболия и лутане по технически неща.”</p>
         <div class="review-user">
           <img class="review-avatar" src="images/review_ivaylo.png" alt="Ивайло П." width="44" height="44">
@@ -329,7 +318,7 @@
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★★ (5 звезди)</div>
         <p>“Най-големият ни страх беше да не бъдем изоставени след пускането на сайта. Вече месеци наред момчетата реагират светкавично за всяка малка промяна или техническа нужда. Поддръжката им е на невероятно ниво.”</p>
         <div class="review-user">
           <img class="review-avatar" src="images/review_stefan.png" alt="д-р Стефан Тодоров" width="44" height="44">
@@ -340,7 +329,18 @@
         </div>
       </div>
       <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars">★★★★☆ (4 звезди)</div>
+        <p>“Бяхме се разбрали да започнем веднага, но проектът ни се забави с 3 дни заради натоварения им график с други клиенти. Когато стартирахме обаче, всичко мина супер бързо. Демото беше готово за ден, а текстовете, които написаха за студиото ни, са страхотни. Спестиха ни много лутане, препоръчвам ги.”</p>
+        <div class="review-user">
+          <img class="review-avatar" src="images/review_maria.png" alt="Елена К." width="44" height="44">
+          <div class="review-info">
+            <span class="review-name">Елена К.</span>
+            <span class="review-role">Основател на интериорно студио</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★ (5 звезди)</div>
         <p>“Клиентите ни често се объркваха коя точно услуга е подходяща за тях. Чат-ботът, който момчетата добавиха, реши този проблем изцяло – той ги насочва автоматично и получаваме готови, качествени запитвания.”</p>
         <div class="review-user">
           <img class="review-avatar" src="images/review_ivan.png" alt="Иван С." width="44" height="44">
@@ -350,6 +350,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div style="text-align: center; margin-top: 40px;" class="reveal">
+      <button type="button" class="btn btn-secondary js-open-review">Добави отзив</button>
     </div>
   </div>
 </section>
@@ -448,6 +451,49 @@
         <span class="btn-text">Изпрати заявка за демо</span>
       </button>
       <p class="form-fine">Без риск. Без предплащане. Отговаряме до 24 часа.</p>
+    </form>
+  </div>
+</div>
+
+<!-- REVIEW MODAL -->
+<div class="modal-overlay" id="reviewModal">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="reviewModalClose" aria-label="Затвори">&times;</button>
+    <div class="modal-head">
+      <span class="tag">Оценка</span>
+      <h2 class="h2">Добави <span class="grad-text">твоето ревю</span></h2>
+    </div>
+
+    <form class="contact-form" id="reviewForm">
+      <div class="form-field">
+        <label for="reviewPhoto">Снимка (аватар)</label>
+        <input type="file" id="reviewPhoto" name="photo" accept="image/*" required>
+      </div>
+      <div class="form-field">
+        <label for="reviewNameInput">Име и Фамилия</label>
+        <input type="text" id="reviewNameInput" name="name" placeholder="напр. Петър П." required>
+      </div>
+      <div class="form-field">
+        <label for="reviewRoleInput">Бизнес / Роля</label>
+        <input type="text" id="reviewRoleInput" name="role" placeholder="напр. Основател на онлайн магазин" required>
+      </div>
+      <div class="form-field">
+        <label>Оценка (звезди)</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 звезди">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 звезди">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 звезди">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 звезди">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 звезда">★</label>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="reviewTextInput">Вашият отзив</label>
+        <textarea id="reviewTextInput" name="text" placeholder="Споделете вашите впечатления от работата с Kinetix..." rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block magnetic">
+        <span class="btn-text">Подай за преглед</span>
+      </button>
     </form>
   </div>
 </div>

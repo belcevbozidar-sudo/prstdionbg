@@ -718,3 +718,30 @@ body.no-scroll{ overflow:hidden; }
   border-color: rgba(255, 176, 32, 0.3) !important;
 }
 
+/* ============ STAR RATING ============ */
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 1.8rem;
+  margin-top: 4px;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  color: var(--text-dimmer);
+  cursor: pointer;
+  transition: color 0.2s, transform 0.1s;
+}
+.star-rating label:hover {
+  transform: scale(1.15);
+}
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: var(--amber);
+}
+
+
